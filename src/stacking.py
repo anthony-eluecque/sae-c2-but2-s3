@@ -44,19 +44,15 @@ class StackingManager():
             print("RGB Stacking")
             image = self.initEmptyRGBImage()
             image = image.astype(int)
-            rgb=True
-        
+            for _image in self.images:
+                image= image + _image
+            image= image//len(self.images)
+            return image
         else:
             print("Classique Stacking")
             image = self.initEmptyImage()
-
-        for row in range(len(image)):
-            for elem in range(len(image[row])):
-                if rgb:
-                    for _image in self.images:
-                        image+=_image
-                    image/=len(self.images)
-                else:
+            for row in range(len(image)):
+                for elem in range(len(image[row])):
                     sum_pixel = 0
                     for data_image in self.images:
                         sum_pixel += data_image[row][elem]
