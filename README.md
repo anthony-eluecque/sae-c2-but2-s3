@@ -17,6 +17,8 @@
         - 2.2.4 Numpy
         - 2.2.5 Scikit-image
         - 2.2.6 Pyinstaller
+            2.6.1 Bibliothèque
+            2.6.2 Compilation de notre programme
 - 3 Fonctionnalités
     - 3.1 Fonctionnalités attendus :
         - 3.1 Stacking
@@ -132,11 +134,22 @@ pip install scikit-image
 
 > #### 2.2.6 Pyinstaller
 
+### 2.2.6.1 **Bibliothèque**
 Grâce à **_Pyinstaller_**, nous avons pu créer un executable (_.exe_) **(crée sous Windows)**.
 
 ```
 pip install pyinstaller
 ```
+
+### 2.2.6.2 **Compilation de notre programme**
+
+Dans un terminal et en pointant le fichier, nous avons exécuté la commande suivante
+
+```
+pyinstaller --onefile mainWindow.py
+```
+
+Nous avons ainsi pu crée un fichier exécutable sous windows , utilisable sur un autre ordinateur (nous avons fait le test)
 
 <sub>Pyinstaller : https://pyinstaller.org/</sub>
 
@@ -144,6 +157,8 @@ pip install pyinstaller
 ## **3 Fonctionnalités ➕**
 
 ### **3.1 Fonctionnalités attendues**
+
+Attendus dans le cahier des charges
 
 > #### 3.1.1 Stacking par moyenne
 
