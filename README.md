@@ -66,7 +66,7 @@ Pour ce projet, nous avons utilisé **_Python_**.
 
 > #### 2.1.2 Avantages
 
-Les avantages qu'on **_Python_** pour ce projet sont nombreux. 
+Les avantages qu'ont **_Python_** pour ce projet sont nombreux. 
  - Dispose de nombreuses librairies pour le traitement d'image.
  - Facilité de développement du fait que **_Python_** est haut niveau.
  - Langage très connu des développeurs.
@@ -75,7 +75,6 @@ Les avantages qu'on **_Python_** pour ce projet sont nombreux.
 
 Malheureusement, **_Python_** a également de nombreux défauts.
  - Le programme est lent pour les gros calculs
- - 
 
 ### 2.2 Librairies 
 
