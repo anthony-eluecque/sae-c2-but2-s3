@@ -17,16 +17,15 @@
         - 2.2.4 Numpy
         - 2.2.5 Scikit-image
         - 2.2.6 Pyinstaller
-            2.6.1 Bibliothèque
-            2.6.2 Compilation de notre programme
+            - 2.2.6.1 Bibliothèque
+            - 2.2.6.2 Compilation de notre programme
 - 3 Fonctionnalités
     - 3.1 Fonctionnalités attendus :
-        - 3.1 Stacking
-            - 3.1.1 Stacking par moyenne
-            - 3.1.2 Stacking par médiane
+        - 3.1.1 Stacking par moyenne
+        - 3.1.2 Stacking par médiane
+        - 3.1.3 Détection des outliers
     - 3.2 Fonctionnalités supplémentaires
         - 3.2.1 Détection des étoiles
-        - 3.2.2 Détection des outliers
         - 3.2.3 Modification de l'intensité
         - 3.2.4 Détection des maximas locaux
     - 3.3 Graphique
@@ -134,14 +133,14 @@ pip install scikit-image
 
 > #### 2.2.6 Pyinstaller
 
-### 2.2.6.1 **Bibliothèque**
+> ##### 2.2.6.1 **Bibliothèque**
 Grâce à **_Pyinstaller_**, nous avons pu créer un executable (_.exe_) **(crée sous Windows)**.
 
 ```
 pip install pyinstaller
 ```
 
-### 2.2.6.2 **Compilation de notre programme**
+> ##### 2.2.6.2 **Compilation de notre programme**
 
 Dans un terminal et en pointant le fichier, nous avons exécuté la commande suivante
 
