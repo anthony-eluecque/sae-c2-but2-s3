@@ -83,7 +83,7 @@ Malheureusement, **_Python_** a également de nombreux défauts.
 **_Astropy_** est au coeur de notre projet, cette librairies nous permet d'ouvrir et d'utiliser les images avec l'extension "_.fits_".
 
 ```
-pip install Astropy
+pip install astropy
 ```
 
 <sub>Astrpy : https://www.astropy.org/</sub>
@@ -94,7 +94,7 @@ pip install Astropy
 Celle-ci permet de créer des intefaces en ayant différents outils pour cela.
 
 ```
-pip install PyQt6
+pip install pyQt5
 ```
 
 <sub>PyQt : https://doc.qt.io/qtforpython/ </sub>
@@ -105,7 +105,7 @@ Nous avons utiliser **_Matplotlib_** pour afficher les images sur l'interface **
 Nous utilisons plus particulièrement **_Matplotlib.Pyplot_**.
 
 ```
-pip install Matplotlib
+pip install matplotlib
 ```
 
 <sub>Matplotlib : https://matplotlib.org/</sub>
@@ -115,7 +115,7 @@ pip install Matplotlib
 La bibliotèque **_Numpy_** nous à permit de travailler avec les données d'une image fits. En effet, ces images sont composées de _"numpy.array"_  pour stocker la couleur des pixels. 
 
 ```
-pip install Numpy
+pip install numpy
 ```
 
 <sub>Numpy : https://numpy.org/</sub>
@@ -125,17 +125,17 @@ pip install Numpy
 **_Scikit-image_** nous a permit de réaliser les filtres sur les images. 
 
 ```
-pip install Scikit-image
+pip install scikit-image
 ```
 
 <sub>Scikit-image : https://scikit-image.org//</sub>
 
 > #### 2.2.6 Pyinstaller
 
-Grâce à **_Pyinstaller_**, nous avons pu créer un executable (_.exe_) pour une ouverture sumplifier de l'interface.
+Grâce à **_Pyinstaller_**, nous avons pu créer un executable (_.exe_) **(crée sous Windows)**.
 
 ```
-pip install Pyinstaller
+pip install pyinstaller
 ```
 
 <sub>Pyinstaller : https://pyinstaller.org/</sub>
@@ -151,18 +151,34 @@ Cette méthode de stacking permet de rendre l'image plus net. Pour faire cela on
 
 > #### 3.1.2 Stacking par médiane
 
-Le stacking par médiane permet de rendre l'image encore plus net qu'avec le stacking par médiane. Pour faire cela on prend les pixels des toutes les images dans chaque coordonnées de l'image pour ensuite prendre la médiane de ces données et ensuite d'attribuer cette valeur comme couleur de ce pixel.
+Le stacking par médiane est une autre méthode d'empilement d'images. Nous avons constatés que celui-ci est plus pertinent que celui par moyenne.
+Le rendu de l'image sera encore plus net (réduction majeur du bruit de l'image)
+
+On fait une liste des pixels des N images sur le même point et on calcule la médiane de cette liste.
+On attribut cette médiane à une nouvelle image comme couleur de ce pixel.
 
 > #### 3.1.3 Détection des outliers
 
+Nous avons jugés qu'il était intéressant de mettre cette détection sur un stacking, après test nous nous sommes rendu compte qu'il est très pertinent de faire cette détection
+sur les deux stackings et de comparer les résultats obtenus
+
+Cette détection se base sur les valeurs au dessus ou en dessus elles sont rejetés et remplacés par un carré blanc sur le rendu finale.
+            *data < center - (sigma_lower * std)*
+            *data > center + (sigma_upper * std)*
+
+
 ### **3.2 Fonctionnalités supplémentaires**
+
+Fonctionnalités qui n'étaient pas attendu mais que nous avons jugé pertinent d'ajouter
 
 > #### 3.2.1 Detection des étoiles ⭐
 
-Antho
+La détection des corps célestes est possible dans notre application, en effet celle-ci est effectué sur un laplace de gaussien (LoG) , le gaussien permet le lissage de l'image (réduction du bruit) et le laplacien est calculé sur une image noir et blanc (détection des "blobs").
+L'intérêt ici d'utiliser un gaussien est que le calcul laplacien est très sensible au bruit de l'image , ainsi le résultat sera plus préçis.
 
-> #### 3.2.1 Detection des outliers
+Si l'image est uniforme, alors le résultat de ce filtre sera uniforme aussi et pencheras vers le noir (0)
 
+*Le résultat peut prendre un certains temps à être calculé, comptez environ 2min pour une image monochromé*
 
 
 > #### 3.2.2 Modification de l'intensité
@@ -175,7 +191,9 @@ Antho
 
 ### **3.3 Graphique**
 
-Antho
+Le Graphique est utilisé afin de connaître le color Scaling de l'image, cela permet de connaître :
+            - Si les couleurs de l'image sont sur 8 bits, 16 bits , ...
+            - Les couleurs utilisées : on peut effectés un traitement sur l'image afin d'isolé les plages de couleurs qui nous intéresse (vmin & vmax dans l'application)
 
 ## **4 Comment l'utiliser ❔**
 
@@ -203,6 +221,8 @@ Une fois dans l'interface, il vous suffit de cliquer sur le bouton _"ouvrir un f
 
 Pour faire du stacking sur une image, il vous suffit de cliquer sur le menu déroulant _"Méthode Stacking"_ et choississez ensuite votre méthode de stacking entre le _stacking moyenne_ ou le _stacking médiane_.
 
+Attention : le Stacking par médiane ne fonctionne que pour les images monochromées, sur les images RGB cela fait plantée l'application (contrairement au stacking par moyenne qui fonctionne pour les 2 types d'images)
+
 <img src = "./img/stacking.png">
 
 > #### 4.2.3 Filtrer une image
@@ -218,6 +238,7 @@ Pour choisir un filtre sur une image stackée, il vous faut cliquer sur le nouve
 > #### 4.2.4 Enregistrer l'image
 
 Pour enregister votre image en format _".png"_, il vous suffit de cliquer sur le bouton "_Enregistrer en PNG"_ ainsi que de choisir l'emplaceent du futur fichier.
+Cette enregistrement est indépendant des calculs, l'image calcul.png ne sert seulement que pour l'affichage de l'interface et permettre l'exécution de certaines fonctionnalitées supplémentaires
 
 <img src = "./img/enregistrer.png">
 
