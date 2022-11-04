@@ -59,28 +59,28 @@ la qualité de l'image.
 
 ### 2.1 Langage de programmation ⚙️
  
-> #### 2.1.1 Quel langage ? 🔠
+> #### 2.1.1 Quel langage ?
 
 Pour ce projet, nous avons utilisé **_Python_**. 
 
 <sub>Python : https://www.python.org/</sub>
 
-> #### 2.1.2 Avantages ✅
+> #### 2.1.2 Avantages
 
 Les avantages qu'on **_Python_** pour ce projet sont nombreux. 
  - Dispose de nombreuses librairies pour le traitement d'image.
  - Facilité de développement du fait que **_Python_** est haut niveau.
  - Langage très connu des développeurs.
  
-> #### 2.1.3 Inconvénients ❌
+> #### 2.1.3 Inconvénients
 
 Malheureusement, **_Python_** a également de nombreux défauts.
  - Le programme est lent pour les gros calculs
  - 
 
-### 2.2 Librairies 📚
+### 2.2 Librairies 
 
-> #### 2.2.1 Astropy 🌌
+> #### 2.2.1 Astropy
 
 **_Astropy_** est au coeur de notre projet, cette librairies nous permet d'ouvrir et d'utiliser les images avec l'extension "_.fits_".
 
@@ -90,7 +90,7 @@ pip install astropy
 
 <sub>Astrpy : https://www.astropy.org/</sub>
 
-> #### 2.2.2 PyQt 🪟
+> #### 2.2.2 PyQt
 
 **_PyQt_** est un module libre qui permet de lier le langage Python avec la bibliothèque Qt.
 Celle-ci permet de créer des intefaces en ayant différents outils pour cela.
@@ -101,7 +101,7 @@ pip install pyQt5
 
 <sub>PyQt : https://doc.qt.io/qtforpython/ </sub>
 
-> #### 2.2.3 Matplotlib 📊
+> #### 2.2.3 Matplotlib
 
 Nous avons utiliser **_Matplotlib_** pour afficher les images sur l'interface **_PyQt_** et créer les graphiques en lien avec l'image.
 Nous utilisons plus particulièrement **_Matplotlib.Pyplot_**.
@@ -215,7 +215,7 @@ Le Graphique est utilisé afin de connaître le color Scaling de l'image, cela p
 
 ## **4 Comment l'utiliser ❔**
 
-### 4.1 Lancer le programme ▶️
+### 4.1 Lancer le programme
 
 > #### 4.1.1 Avec le code 
 
