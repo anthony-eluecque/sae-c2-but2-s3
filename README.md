@@ -178,15 +178,16 @@ Nous avons jugés qu'il était intéressant de mettre cette détection sur un st
 sur les deux stackings et de comparer les résultats obtenus
 
 Cette détection se base sur les valeurs au dessus ou en dessus elles sont rejetés et remplacés par un carré blanc sur le rendu finale.
+
             *data < center - (sigma_lower * std)*
             *data > center + (sigma_upper * std)*
 
 
 ### **3.2 Fonctionnalités supplémentaires**
 
-Fonctionnalités qui n'étaient pas attendu mais que nous avons jugé pertinent d'ajouter
+Fonctionnalités qui n'étaient pas attendu mais que nous avons jugé pertinent d'ajouter.
 
-> #### 3.2.1 Detection des étoiles ⭐
+> #### 3.2.1 Detection des étoiles
 
 La détection des corps célestes est possible dans notre application, en effet celle-ci est effectué sur un laplace de gaussien (LoG) , le gaussien permet le lissage de l'image (réduction du bruit) et le laplacien est calculé sur une image noir et blanc (détection des "blobs").
 L'intérêt ici d'utiliser un gaussien est que le calcul laplacien est très sensible au bruit de l'image , ainsi le résultat sera plus préçis.
@@ -200,7 +201,7 @@ Si l'image est uniforme, alors le résultat de ce filtre sera uniforme aussi et 
 
 L'intensité ici est modifié par un input de l'utilisateur, de base celle-ci s'adapte à la range de l'image, l'intérêt de cet ajout est de mettre en surbrillance ou de cacher certaines zones de l'image, ces valeurs peuvent montés jusqu'à "presque" l'infini (si on peut le quantifier)
 
-> #### 3.3 Detection des maximas locaux
+> #### 3.2.3 Detection des maximas locaux
 
 Un extremum est une valeur maximale ou minimale, ici sur une image un maxima est un pixel si il est supérieur à égale à tous ces voisins immédiats
 L'intérêt est donc de déterminer ou se trouve les corps célestes ou les éléments qui sont en commun, cela permet donc d'ajouter un complément à la détection d'étoiles, ou bien même à l'intensité puisque l'on peut détecter les "éléments" 
@@ -250,7 +251,15 @@ Pour choisir un filtre sur une image stackée, il vous faut cliquer sur le nouve
 
 > ##### 4.2.3.1 Detection des outliers
 
+Après avoir choisit le filtre pour détecter les outliers sur une image, vous avez la possibilité de régler le paramètre _"sigma"_. Pour cela, il faut donc changer la valeur dans la zone de texte apparue et ensuite appuyer sur le bouton _"Détecter les valeurs aberrantes"_.
+
+<img src="./img/choixOutliers.png">
+
 > ##### 4.2.3.2 Modification de l'intensité
+
+Suite à la selection du filtre _"Modifier l'intensité"_, il vous est possible de choisir l'intensité minimale et l'intensité maximale du filtre. Pour cela, il suffir de rentrer les valeurs dans les deux zones de textes qui sont apparues après le choix de ce filtre et enfin cliquer sur le bouton _"Afficher"_.
+
+<img src="./img/choixIntensite.png">
 
 > #### 4.2.4 Enregistrer l'image
 
