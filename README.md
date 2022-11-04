@@ -183,10 +183,12 @@ Si l'image est uniforme, alors le résultat de ce filtre sera uniforme aussi et 
 
 > #### 3.2.2 Modification de l'intensité
 
-Antho
+L'intensité ici est modifié par un input de l'utilisateur, de base celle-ci s'adapte à la range de l'image, l'intérêt de cet ajout est de mettre en surbrillance ou de cacher certaines zones de l'image, ces valeurs peuvent montés jusqu'à "presque" l'infini (si on peut le quantifier)
 
 > #### 3.3 Detection des maximas locaux
 
+Un extremum est une valeur maximale ou minimale, ici sur une image un maxima est un pixel si il est supérieur à égale à tous ces voisins immédiats
+L'intérêt est donc de déterminer ou se trouve les corps célestes ou les éléments qui sont en commun, cela permet donc d'ajouter un complément à la détection d'étoiles, ou bien même à l'intensité puisque l'on peut détecter les "éléments" 
 
 
 ### **3.3 Graphique**
