@@ -17,8 +17,8 @@
         - 2.2.4 Numpy
         - 2.2.5 Scikit-image
         - 2.2.6 Pyinstaller
-            2.2.6.1 Bibliothèque
-            2.2.6.2 Compilation de notre programme
+            - 2.2.6.1 Bibliothèque
+            - 2.2.6.2 Compilation de notre programme
 - 3 Fonctionnalités
     - 3.1 Fonctionnalités attendues :
         - 3.1 Stacking
