@@ -21,10 +21,9 @@
             - 2.2.6.2 Compilation de notre programme
 - 3 Fonctionnalités
     - 3.1 Fonctionnalités attendues :
-        - 3.1 Stacking
-            - 3.1.1 Stacking par moyenne
-            - 3.1.2 Stacking par médiane
-            - 3.1.3 Détection des outliers
+        - 3.1.1 Stacking par moyenne
+        - 3.1.2 Stacking par médiane
+        - 3.1.3 Détection des outliers
     - 3.2 Fonctionnalités supplémentaires
         - 3.2.1 Détection des étoiles
         - 3.2.2 Modification de l'intensité
