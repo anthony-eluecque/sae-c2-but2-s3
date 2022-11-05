@@ -38,9 +38,7 @@ class StackingManager():
             np.ndarray: Image empilée
         """
         print(len(self.images[0][0]))
-        rgb = False
         if len(self.images[0].shape)==3:
-            
             print("RGB Stacking")
             image = self.initEmptyRGBImage()
             image = image.astype(int)
