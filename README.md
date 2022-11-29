@@ -197,7 +197,7 @@ L'intensité ici est modifiée par un input de l'utilisateur, de base celle-ci s
 L'intérêt est de mettre en surbrillance ou de cacher certaines zones de l'image.
 Ces valeurs peuvent montées jusqu'à "presque" l'infini (si on peut le quantifier)
 
-> #### 3.3 Detection des maximas locaux
+> #### 3.2.3 Detection des maximas locaux
 
 Un extremum est une valeur maximale ou minimale.
 Sur une image un maxima est un pixel si ce pixel est supérieur ou égal à tous ses voisins immédiats.
