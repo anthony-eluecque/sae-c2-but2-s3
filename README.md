@@ -127,14 +127,15 @@ pip install scikit-image
 
 > #### 2.2.6 Pyinstaller
 
-### 2.2.6.1 **Bibliothèque**
+> ##### 2.2.6.1 **Bibliothèque**
+
 Grâce à **_Pyinstaller_**, nous avons pu créer un executable (_.exe_) **(crée sous Windows)**.
 
 ```
 pip install pyinstaller
 ```
 
-### 2.2.6.2 **Compilation de notre programme**
+> ##### 2.2.6.2 **Compilation de notre programme**
 
 Dans un terminal et en pointant le fichier, nous avons exécuté la commande suivante
 
